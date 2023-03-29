@@ -1,5 +1,7 @@
 package array;
 
+import java.util.Arrays;
+
 public class Main3 {
     public static void main(String[] args) {
         /*Write a program that creates an array of String type and
@@ -14,8 +16,7 @@ public class Main3 {
 
         String[] colorArrayClone = colorArray.clone();
 
-        for (String cloneContents : colorArrayClone)
-        System.out.println(cloneContents);
+        System.out.println(Arrays.toString(colorArrayClone));
 
     }
 }
