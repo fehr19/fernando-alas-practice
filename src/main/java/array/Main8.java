@@ -46,6 +46,6 @@ public class Main8 {
             }
             System.out.println("\"" + tempArray[i] + "\" occurs " + counter);
         }
-        System.out.println(Arrays.toString(tempArray));
+        //System.out.println(Arrays.toString(tempArray));
     }
 }
