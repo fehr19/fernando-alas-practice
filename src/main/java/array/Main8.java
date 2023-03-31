@@ -1,5 +1,6 @@
 package array;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -23,14 +24,29 @@ public class Main8 {
         String[] inputArray = sentencesInput.replaceAll("\\p{Punct}", "").split("\\s+");
 
 
-        //System.out.println(Arrays.toString(inputArray));
-
         //initialize tempArray same length as inputArray
         int a = inputArray.length;
         String[] tempArray = new String[a];
+        //tempArray[0] = inputArray[0];
+        int[] wordCount = new int[a];
+        int tempArrayCount = 0;
 
 
         for (int i = 0; i < a; i++) {
+
+            System.out.println(linearSearch(inputArray, inputArray[i]));
+            if (linearSearch(inputArray, inputArray[i]) == 1) {
+                tempArray[tempArrayCount] = inputArray[i];
+
+            }
+
+        }
+
+        System.out.println(Arrays.toString(tempArray));
+
+
+
+        /*for (int i = 0; i < a; i++) {
 
             //reset counter before next comparison iteration
             int counter = 0;
@@ -45,7 +61,18 @@ public class Main8 {
                 }
             }
             System.out.println("\"" + tempArray[i] + "\" occurs " + counter);
-        }
-        //System.out.println(Arrays.toString(tempArray));
+        }*/
+
     }
+
+    public static int linearSearch (String[] arr, String key) {
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].equals(key)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
 }
