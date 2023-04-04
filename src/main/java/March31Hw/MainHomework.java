@@ -8,13 +8,13 @@ public class MainHomework {
         Product product1 = new Product("TV", 1499.99);
         Product product2 = new Product("Monitor", 249.98);
 
-
-        Customer customer1 = new Customer("Jenny Jones",
-                new Product[] ;
+        Customer customer1 = new Customer("Jenny Jones", new Product[] {product1} );
 
         customer1.setEmail("jennyjones@jennyshow.com");
 
         customer1.customerSummary();
+
+
 
 
     }
