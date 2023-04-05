@@ -31,7 +31,7 @@ public class StudentRecord {
     double algebraScore;
 
     // Getters - Setters
-    private static int getStudentCount() {
+    public static int getStudentCount() {
 
         return studentCount;
     }

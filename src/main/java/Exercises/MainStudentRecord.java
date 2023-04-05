@@ -14,9 +14,8 @@ public class MainStudentRecord {
         student2.setMathScore(94.2);
         student2.setScienceScore(98.9);*/
 
-        //Print number of students
-        /*System.out.println(StudentRecord.studentCount);
 
+        /*
         System.out.println("Name: " + student1.getStudentName());
         System.out.printf("Average Score: %.1f%%\n", student1.avgScore());
 
@@ -41,6 +40,10 @@ public class MainStudentRecord {
         student1.print(student1.studentName, student1.avgScore());
         student2.print(student2.studentName, student2.avgScore());
         student3.print(student3.studentName, student3.avgScore());
+
+        //Print number of students
+        System.out.println(StudentRecord.studentCount);
+
 
     }
 }
