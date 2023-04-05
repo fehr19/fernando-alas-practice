@@ -2,7 +2,7 @@ package Exercises;
 
 public class StudentRecord {
 
-    // Constructor
+    // Constructors
     public StudentRecord() {
         studentCount++;
     }
@@ -72,16 +72,17 @@ public class StudentRecord {
     }
 
     public void setAlgebraScore(double algebraScore) {
+
         this.algebraScore = algebraScore;
     }
 
     // Class Methods
     public double avgScore() {
-        double avg = ((mathScore + scienceScore + algebraScore) / 3);
-        return avg;
+        return ((mathScore + scienceScore + algebraScore) / 3);
     }
 
     public void print(String name) {
+
         System.out.println("Student name: " + name);
     }
 

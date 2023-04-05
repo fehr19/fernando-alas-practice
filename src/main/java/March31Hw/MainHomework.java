@@ -8,14 +8,15 @@ public class MainHomework {
         Product product1 = new Product("TV", 1499.99);
         Product product2 = new Product("Monitor", 249.98);
 
-        Customer customer1 = new Customer("Jenny Jones", new Product[] {product1} );
+        Customer customer1 = new Customer("Jenny Jones", "jenny@jonesshow.com");
+        Product[] customer1Products = {product1, product2};
+        customer1.setPurchasedProducts(customer1Products);
 
-        customer1.setEmail("jennyjones@jennyshow.com");
+        //customer1.addAddress();
 
-        customer1.customerSummary();
-
-
+        customer1.getCustomerInfo();
 
 
     }
+
 }
