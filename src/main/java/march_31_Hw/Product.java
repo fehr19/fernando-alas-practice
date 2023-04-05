@@ -1,8 +1,11 @@
-package March31Hw;
+package march_31_Hw;
 
 public class Product {
     String name;
     double price;
+
+    public Product() {
+    }
 
     public Product(String name, double price) {
         this.name = name;

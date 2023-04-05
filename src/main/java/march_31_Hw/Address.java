@@ -1,4 +1,4 @@
-package March31Hw.CustomerInfo;
+package march_31_Hw;
 
 public class Address {
 
