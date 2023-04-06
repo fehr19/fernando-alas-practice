@@ -24,6 +24,7 @@ public class Customer {
             }
         }
         addresses[i] = address;
+        addresses[currentAddressIndex++] = address;
 
     }
 
@@ -55,13 +56,23 @@ public class Customer {
         String result = customerName[0].getFullName() + "\n"
                 + email + "\n";
 
+        for (int ii = 0; ii < addresses.length; ii++) {
+            if (addresses[ii] == null) {
+                break;
+            }
+            result += "\nAddress " + (ii + 1) + ":"
+                    + "\n" + addresses[ii].getStreetNumber() + " "
+                    + addresses[ii].getStreetName() + "\n"
+                    + addresses[ii].getCity() + ", "
+                    + addresses[ii].getState() + "\n";
+        }
+
+        result += "\n";
 
         for (int i = 0; i < purchasedProducts.length; i++) {
             result += purchasedProducts[i].getProductName() + " "
                     + purchasedProducts[i].getPrice() + "\n";
-
         }
-        //TODO need to print out addresses
         return result;
     }
 
