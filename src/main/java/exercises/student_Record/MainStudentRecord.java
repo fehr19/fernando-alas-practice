@@ -1,4 +1,4 @@
-package exercises;
+package exercises.student_Record;
 
 public class MainStudentRecord {
     public static void main(String[] args) {

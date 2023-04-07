@@ -11,6 +11,10 @@ public class CustomerName {
         this.lastName = lastName;
     }
 
+    public String getFullName() {
+        return firstName + " " + middleName + " " + lastName;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -21,9 +25,5 @@ public class CustomerName {
 
     public String getLastName() {
         return lastName;
-    }
-
-    public String getFullName() {
-        return firstName + " " + middleName + " " + lastName;
     }
 }

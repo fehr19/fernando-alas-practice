@@ -1,4 +1,4 @@
-package exercises;
+package exercises.student_Record;
 
 public class StudentRecord {
 

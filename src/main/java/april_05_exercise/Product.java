@@ -1,13 +1,13 @@
 package april_05_exercise;
 
 public class Product {
+    String productName;
+    double price;
+
     public Product(String productName, double price) {
         this.productName = productName;
         this.price = price;
     }
-
-    String productName;
-    double price;
 
     public String getProductName() {
         return productName;

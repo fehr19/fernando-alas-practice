@@ -28,30 +28,6 @@ public class Customer {
 
     }
 
-    public CustomerName[] getCustomerName() {
-        return customerName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Product[] getPurchasedProducts() {
-        return purchasedProducts;
-    }
-
-    public void setPurchasedProducts(Product[] purchasedProducts) {
-        this.purchasedProducts = purchasedProducts;
-    }
-
-    public void setAddresses(Address[] addresses) {
-        this.addresses = addresses;
-    }
-
     public String getCustomerInfo() {
         String result = customerName[0].getFullName() + "\n"
                 + email + "\n";
@@ -74,6 +50,30 @@ public class Customer {
                     + purchasedProducts[i].getPrice() + "\n";
         }
         return result;
+    }
+
+    public CustomerName[] getCustomerName() {
+        return customerName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Product[] getPurchasedProducts() {
+        return purchasedProducts;
+    }
+
+    public void setPurchasedProducts(Product[] purchasedProducts) {
+        this.purchasedProducts = purchasedProducts;
+    }
+
+    public void setAddresses(Address[] addresses) {
+        this.addresses = addresses;
     }
 
 }
