@@ -3,22 +3,28 @@ package employee_app.com.hr.personnel;
 import java.time.LocalDate;
 
 public class Employee {
+    //Variables
     private String name;
     private LocalDate hireDate;
 
+    //Constructors
     public Employee(String name, LocalDate hireDate) {
         this.name = name;
         this.hireDate = hireDate;
     }
 
-    // If current year is 2022 and the year of hireDate is
-    // 2020, it returns 2
-    public int computeNumberOfYearsWorkedSinceHired() {
+    //Methods
+    public double computeMonthlyCompensation() {
 
+        return 0.0;
+    }
+
+    public int computeNumberOfYearsWorkedSinceHired() {
 
         return LocalDate.now().getYear() - hireDate.getYear();
     }
 
+    //Setters and Getters
     public String getEmployeeInfo() {
         return "Name = " + name + " - " + "Hire Date = " + hireDate;
     }

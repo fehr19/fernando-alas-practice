@@ -1,16 +1,19 @@
 package employee_app.com.hr.personnel;
 
 public class Department {
+    //Variables
     int currentIndex = 0;
     private String name;
     private String location;
     private Employee[] employees = new Employee[100];
 
+    //Constructor
     public Department(String name, String location) {
         this.name = name;
         this.location = location;
     }
 
+    //Methods
     public void addEmployee(Employee employee) {
         employees[currentIndex++] = employee;
     }
@@ -28,7 +31,20 @@ public class Department {
         return workedResult;
     }
 
+    // Compute total monthly compensation of all
+    // employees in that department
+    public double computeDepartmentMonthlyTotalCompensation() {
+        double totalMonthlyCompensation = 0;
+        for (int i = 0; i < currentIndex; i++) {
+            totalMonthlyCompensation +=
+                    employees[i].computeMonthlyCompensation();
 
+        }
+        return totalMonthlyCompensation;
+    }
+
+
+    //Setters and Getters
     public String getName() {
         return name;
     }
