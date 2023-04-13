@@ -1,0 +1,41 @@
+package arraylist_and_methods;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CreateArrayListFromCollectionExample2 {
+    public static void main(String[] args) {
+        List<String> topCompanies = new ArrayList<>();
+
+        // Check if ArrayList is empty
+       System.out.println("Is the topCompanies list empty? :"
+        + topCompanies.isEmpty()); // TODO write a method to return String "Yes" or "No"
+
+
+        topCompanies.add("Google");
+        topCompanies.add("Apple");
+        topCompanies.add("Microsoft");
+        topCompanies.add("Amazon");
+        topCompanies.add("Facebook");
+
+        // Find the size of the ArrayList
+        System.out.println("Here are the top" +
+                topCompanies.size() + "companies in the world");
+
+        System.out.println(topCompanies);
+
+        // Retrieve the element at an index
+        String bestCompany = topCompanies.get(0);
+        String secondBestCompany = topCompanies.get(1);
+        String lastCompany = topCompanies.get(topCompanies.size() - 1);
+
+        System.out.println("Best Company: " + bestCompany);
+        System.out.println("Second Best Company: " + secondBestCompany);
+        System.out.println("Last Company in the list: " + lastCompany);
+
+        //TODO finish homework here
+
+
+    }
+
+}

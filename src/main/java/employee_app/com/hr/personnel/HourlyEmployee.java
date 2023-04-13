@@ -20,6 +20,15 @@ public class HourlyEmployee extends Employee {
         return hoursWorked * hourlyRate;
     }
 
+    @Override
+    //TODO finish logic here, need to add more return values
+    public String getEmployeeInfo() {
+        return "Name = " + getName()
+                + " - " + "Hire Date = "
+                + getHireDate();
+
+    }
+
     //Setters and Getters
     public double getHoursWorked() {
         return hoursWorked;

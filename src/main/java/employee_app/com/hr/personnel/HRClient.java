@@ -13,6 +13,8 @@ public class HRClient {
                 LocalDate.of(2017, 9, 07), 160, 20);
 
 
+        employee1.computeMonthlyCompensation();
+
         System.out.println(employee1.getEmployeeInfo());
         System.out.println("Years at company: " + employee1.computeNumberOfYearsWorkedSinceHired());
         System.out.println(employee2.getEmployeeInfo());

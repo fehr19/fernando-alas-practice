@@ -2,7 +2,7 @@ package employee_app.com.hr.personnel;
 
 import java.time.LocalDate;
 
-public class Employee {
+public abstract class Employee {
     //Variables
     private String name;
     private LocalDate hireDate;
@@ -14,10 +14,7 @@ public class Employee {
     }
 
     //Methods
-    public double computeMonthlyCompensation() {
-
-        return 0.0;
-    }
+    public abstract double computeMonthlyCompensation();
 
     public int computeNumberOfYearsWorkedSinceHired() {
 
@@ -25,9 +22,7 @@ public class Employee {
     }
 
     //Setters and Getters
-    public String getEmployeeInfo() {
-        return "Name = " + name + " - " + "Hire Date = " + hireDate;
-    }
+    public abstract String getEmployeeInfo();
 
     public String work() {
         return name + " worked.";

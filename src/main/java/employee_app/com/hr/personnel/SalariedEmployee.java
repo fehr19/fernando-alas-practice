@@ -20,6 +20,12 @@ public class SalariedEmployee extends Employee {
         return monthlySalary;
     }
 
+    @Override
+    public String getEmployeeInfo() {
+        //TODO finish logic for getEmployeeinfo
+        return null;
+    }
+
     //Setters and Getters
     public double getMonthlySalary() {
         return monthlySalary;
