@@ -11,6 +11,7 @@ target/
 .idea/compiler.xml
 .idea/libraries/
 .idea/uiDesigner.xml
+*.xml
 *.iws
 *.iml
 *.ipr
