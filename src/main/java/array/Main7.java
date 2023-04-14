@@ -1,7 +1,5 @@
 package array;
 
-import java.util.Arrays;
-
 public class Main7 {
     public static void main(String[] args) {
         /* Write a program where you create an array

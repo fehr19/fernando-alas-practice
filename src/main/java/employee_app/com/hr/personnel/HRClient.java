@@ -1,7 +1,6 @@
 package employee_app.com.hr.personnel;
 
 import java.time.LocalDate;
-import java.util.Arrays;
 
 public class HRClient {
     public static void main(String[] args) {
@@ -34,9 +33,6 @@ public class HRClient {
         System.out.println("Total Number of Employees in " + department.getName() + ": " + jj);
         System.out.printf("Total department monthly salary: " + "$%, .2f",
                 department.computeDepartmentMonthlyTotalCompensation());
-
-
-
 
 
     }

@@ -14,6 +14,7 @@ public class HourlyEmployee extends Employee {
         this.hoursWorked = hoursWorked;
         this.hourlyRate = hourlyRate;
     }
+
     //Methods
     @Override
     public double computeMonthlyCompensation() {

@@ -16,6 +16,5 @@ public class Main4 {
         System.out.println("Last index value: " + myIntArray[myIntArray.length - 1]);
 
 
-
     }
 }

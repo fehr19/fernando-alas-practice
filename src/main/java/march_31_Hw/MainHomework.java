@@ -12,8 +12,8 @@ public class MainHomework {
         customer1.setEmail("fern@ndo.com");
 
         Product[] products = new Product[10];
-        products[0] = new Product("TV",1499.99);
-        products[1] = new Product("Monitor",329.99);
+        products[0] = new Product("TV", 1499.99);
+        products[1] = new Product("Monitor", 329.99);
         customer1.setProducts(products);
         customer1.setNumberOfValidProducts(2);
 

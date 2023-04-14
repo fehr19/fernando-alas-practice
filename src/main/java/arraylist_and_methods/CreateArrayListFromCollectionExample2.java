@@ -8,8 +8,8 @@ public class CreateArrayListFromCollectionExample2 {
         List<String> topCompanies = new ArrayList<>();
 
         // Check if ArrayList is empty
-       System.out.println("Is the topCompanies list empty? :"
-        + topCompanies.isEmpty()); // TODO write a method to return String "Yes" or "No"
+        System.out.println("Is the topCompanies list empty? :"
+                + topCompanies.isEmpty()); // TODO write a method to return String "Yes" or "No"
 
 
         topCompanies.add("Google");
@@ -33,7 +33,10 @@ public class CreateArrayListFromCollectionExample2 {
         System.out.println("Second Best Company: " + secondBestCompany);
         System.out.println("Last Company in the list: " + lastCompany);
 
-        //TODO finish homework here
+        //Modifying elements
+        topCompanies.set(4, "Walmart");
+        System.out.println("Modified top companies list: " +
+                topCompanies);
 
 
     }

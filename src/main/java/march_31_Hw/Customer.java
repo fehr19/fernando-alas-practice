@@ -1,8 +1,5 @@
 package march_31_Hw;
 
-import march_31_Hw.Address;
-import march_31_Hw.Product;
-
 public class Customer {
 
     //Fields
@@ -38,9 +35,6 @@ public class Customer {
         }
         return result;
     }
-
-
-
 
 
     //Setters and Getters

@@ -2,6 +2,12 @@ package exercises.student_Record;
 
 public class StudentRecord {
 
+    // Fields
+    static int studentCount;
+    String studentName;
+    double mathScore;
+    double scienceScore;
+    double algebraScore;
     // Constructors
     public StudentRecord() {
         studentCount++;
@@ -22,13 +28,6 @@ public class StudentRecord {
         this.algebraScore = algebraScore;
         studentCount++;
     }
-
-    // Fields
-    static int studentCount;
-    String studentName;
-    double mathScore;
-    double scienceScore;
-    double algebraScore;
 
     // Getters - Setters
     public static int getStudentCount() {

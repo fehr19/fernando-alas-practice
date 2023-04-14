@@ -1,7 +1,5 @@
 package exercises.inheritance_test;
 
-import employee_app.com.hr.personnel.Employee;
-
 class Employee1 {
     String getName() {
         return null;

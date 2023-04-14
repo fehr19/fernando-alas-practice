@@ -1,8 +1,8 @@
 package exercises.dog_Inheritance;
 
 public class Dog {
-    private String bark;
     public String run = "*Running*";
+    private String bark;
 
     public void getBark() {
         System.out.println(bark);
