@@ -7,7 +7,7 @@ public class HRClient {
         Employee employee1 = new SalariedEmployee("Com Truise",
                 LocalDate.of(2020, 3, 22), 7000);
         Employee employee2 = new SalariedEmployee("San Holo",
-                LocalDate.of(2015, 7, 28), 5000);
+                LocalDate.of(2015, 7, 28), 10000);
         Employee employee3 = new HourlyEmployee("Dopple Ganger",
                 LocalDate.of(2017, 9, 07), 160, 20);
 

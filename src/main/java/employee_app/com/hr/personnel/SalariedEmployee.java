@@ -22,8 +22,9 @@ public class SalariedEmployee extends Employee {
 
     @Override
     public String getEmployeeInfo() {
-        //TODO finish logic for getEmployeeinfo
-        return null;
+        return "Name = " + getName()
+                + " - " + "Hire Date = "
+                + getHireDate();
     }
 
     //Setters and Getters
