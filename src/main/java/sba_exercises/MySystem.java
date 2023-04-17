@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 public class MySystem {
-    private Map<String, Item> myItemsInHashMap;
+    private static Map<String, Item> myItemsInHashMap;
 
     // Constructor
     public MySystem() throws FileNotFoundException {
@@ -28,6 +28,15 @@ public class MySystem {
     }
 
     //methods
+    public static Item addItem(Item item) {
+        Item item1 = new Item();
+        if (myItemsInHashMap.containsKey(item1.getItemName())) {
+            System.out.println(item1.getItemName() + " is already present.  Cannot be added.");
+        } else {
+            myItemsInHashMap.put(item1.itemName, item1);
+        }
+        return item;
+    }
 
 
     // Setters and Getters

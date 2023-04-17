@@ -45,6 +45,19 @@ public class Main {
                     mapItem.getItemName(), mapItem.getItemDescription(),
                     mapItem.getItemPrice(), mapItem.getAvailableQuantity());
         }
+        System.out.println("----------- Testing addItem(..) method -----------");
+
+        Item customItem = new Item("Reuben", "A Classic",
+                12.49, 17);
+
+        MySystem.addItem(customItem);
+
+        for (String keyName : mySystem.getMyItemsInHashMap().keySet()) {
+            Item mapItem = mySystem.getMyItemsInHashMap().get(keyName);
+            System.out.printf("%-20s %-20s %-10.2f %-10d %n",
+                    mapItem.getItemName(), mapItem.getItemDescription(),
+                    mapItem.getItemPrice(), mapItem.getAvailableQuantity());
+        }
 
     }
 }
