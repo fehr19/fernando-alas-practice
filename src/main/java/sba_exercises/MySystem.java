@@ -29,13 +29,20 @@ public class MySystem {
 
     //methods
     public static Item addItem(Item item) {
-        Item item1 = new Item();
-        if (myItemsInHashMap.containsKey(item1.getItemName())) {
-            System.out.println(item1.getItemName() + " is already present.  Cannot be added.");
+        if (myItemsInHashMap.containsKey(item.getItemName())) {
+            System.out.println(item.getItemName() + " is already present.  Cannot be added.");
         } else {
-            myItemsInHashMap.put(item1.itemName, item1);
+            myItemsInHashMap.put(item.getItemName(), item);
         }
         return item;
+    }
+
+    public static Item removeItem(String itemName) {
+        if (myItemsInHashMap.containsKey(itemName)) {
+            myItemsInHashMap.remove(itemName);
+            return myItemsInHashMap.get(itemName);
+        } else return null;
+
     }
 
 

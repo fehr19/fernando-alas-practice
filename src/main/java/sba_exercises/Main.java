@@ -2,7 +2,9 @@ package sba_exercises;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
@@ -15,7 +17,8 @@ public class Main {
         List<String> lineItem;
 
         System.out.println("----------- Testing reading sample.txt -----------");
-        System.out.printf("%-20s %-20s %-10s %-10s %n", "Name", "Description", "Price", "Available Quantity");
+        System.out.printf("%-20s %-20s %-10s %-10s %n", "Name", "Description",
+                "Price", "Available Quantity");
 
         while (input.hasNextLine()) {
             lineItem = (Arrays.asList(input.nextLine().split("  ")));
@@ -36,7 +39,7 @@ public class Main {
                 item1.getItemName(), item1.getItemDescription(),
                 item1.getItemPrice(), item1.getAvailableQuantity());
 
-        System.out.println("----------- Testing the constructor of MySystem class-----------");
+        System.out.println("------ Testing the constructor of MySystem class ------");
         MySystem mySystem = new MySystem();
 
         for (String keyName : mySystem.getMyItemsInHashMap().keySet()) {
@@ -45,12 +48,31 @@ public class Main {
                     mapItem.getItemName(), mapItem.getItemDescription(),
                     mapItem.getItemPrice(), mapItem.getAvailableQuantity());
         }
-        System.out.println("----------- Testing addItem(..) method -----------");
+        System.out.println("-------------- Testing addItem(..) method --------------");
+        System.out.println("size before adding a new item = " +
+                mySystem.getMyItemsInHashMap().size());
 
-        Item customItem = new Item("Reuben", "A Classic",
-                12.49, 17);
+        MySystem.addItem(new Item("reuben", "a classic",
+                12.49, 17));
 
-        MySystem.addItem(customItem);
+        System.out.println("size after adding a new item = " +
+                mySystem.getMyItemsInHashMap().size());
+
+        for (String keyName : mySystem.getMyItemsInHashMap().keySet()) {
+            Item mapItem = mySystem.getMyItemsInHashMap().get(keyName);
+            System.out.printf("%-20s %-20s %-10.2f %-10d %n",
+                    mapItem.getItemName(), mapItem.getItemDescription(),
+                    mapItem.getItemPrice(), mapItem.getAvailableQuantity());
+        }
+        MySystem.addItem(new Item("reuben", "a classic",
+                12.49, 17));
+
+        System.out.println("size after adding an existing item = " +
+                mySystem.getMyItemsInHashMap().size());
+
+        System.out.println("----------- Testing reduceAvailableQuantity(..) method -----------");
+
+        MySystem.removeItem("pizza");
 
         for (String keyName : mySystem.getMyItemsInHashMap().keySet()) {
             Item mapItem = mySystem.getMyItemsInHashMap().get(keyName);
@@ -59,5 +81,7 @@ public class Main {
                     mapItem.getItemPrice(), mapItem.getAvailableQuantity());
         }
 
+        System.out.println("size after removing an existing item = " +
+                mySystem.getMyItemsInHashMap().size());
     }
 }

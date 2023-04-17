@@ -2,10 +2,10 @@ package sba_exercises;
 
 
 public class Item {
-    String itemName;
-    String itemDescription;
-    Double itemPrice;
-    Integer availableQuantity;
+    private String itemName;
+    private String itemDescription;
+    private Double itemPrice;
+    private Integer availableQuantity;
 
     // Constructors
     public Item() {
