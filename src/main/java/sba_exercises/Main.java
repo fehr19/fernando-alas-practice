@@ -52,6 +52,7 @@ public class Main {
         System.out.println("size before adding a new item = " +
                 mySystem.getMyItemsInHashMap().size());
 
+        // Adding a new item
         MySystem.addItem(new Item("reuben", "a classic",
                 12.49, 17));
 
@@ -64,13 +65,14 @@ public class Main {
                     mapItem.getItemName(), mapItem.getItemDescription(),
                     mapItem.getItemPrice(), mapItem.getAvailableQuantity());
         }
+        //Attempt to add an existing item
         MySystem.addItem(new Item("reuben", "a classic",
                 12.49, 17));
 
         System.out.println("size after adding an existing item = " +
                 mySystem.getMyItemsInHashMap().size());
 
-        System.out.println("----------- Testing reduceAvailableQuantity(..) method -----------");
+        System.out.println("----------- Testing removeItem(..) method -----------");
 
         MySystem.removeItem("pizza");
 
@@ -83,5 +85,16 @@ public class Main {
 
         System.out.println("size after removing an existing item = " +
                 mySystem.getMyItemsInHashMap().size());
+
+        System.out.println("----------- Testing reduceAvailableQuantity(..) method -----------");
+
+        MySystem.reduceAvailableQuantity("reuben");
+
+        for (String keyName : mySystem.getMyItemsInHashMap().keySet()) {
+            Item mapItem = mySystem.getMyItemsInHashMap().get(keyName);
+            System.out.printf("%-20s %-20s %-10.2f %-10d %n",
+                    mapItem.getItemName(), mapItem.getItemDescription(),
+                    mapItem.getItemPrice(), mapItem.getAvailableQuantity());
+        }
     }
 }

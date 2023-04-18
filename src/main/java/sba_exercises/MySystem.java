@@ -45,6 +45,17 @@ public class MySystem {
 
     }
 
+    public static Item reduceAvailableQuantity(String itemName) {
+        if (myItemsInHashMap.get(itemName).getAvailableQuantity() == 1) {
+            myItemsInHashMap.remove(itemName);
+            return myItemsInHashMap.get(itemName);
+        } else if (myItemsInHashMap.containsKey(itemName)) {
+            Integer updateQuantity = myItemsInHashMap.get(itemName).getAvailableQuantity();
+            myItemsInHashMap.get(itemName).setAvailableQuantity(updateQuantity - 1);
+            return myItemsInHashMap.get(itemName);
+        } else return null;
+    }
+
 
     // Setters and Getters
     public Map<String, Item> getMyItemsInHashMap() {
