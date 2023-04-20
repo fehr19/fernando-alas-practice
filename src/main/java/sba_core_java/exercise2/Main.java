@@ -22,7 +22,9 @@ public class Main {
         System.out.println(Arrays.toString(newTeam.playerNumberArray));
         newTeam.sendPlayerToMinorLeague(4);
 
+        newTeam.transferPlayerToDifferentTeam(6, "Tottenham");
 
+        newTeam.transferPlayerToDifferentTeam(6, "Napoli");
 
     }
 }
